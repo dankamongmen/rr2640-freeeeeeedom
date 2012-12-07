@@ -143,7 +143,7 @@ CONFIG_SCSI_${UTARGETNAME}=y
 		fi
 	fi
 	;;
-	2.6 )
+	* )
 	cd ${HPT_ROOT}/lib/linux/free-${ARCH}-regparm0
 	ld -r -o ${ARCH}-${TARGETNAME}.obj ${TARGETMODS}
 	mv ${ARCH}-${TARGETNAME}.obj $KERNELDIR/drivers/scsi/${TARGETNAME}/	
