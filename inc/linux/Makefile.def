@@ -80,16 +80,6 @@ ifeq ($(KERNEL_VER),)
 $(error Cannot find kernel version. Check $(KERNELDIR)/include/linux/version.h.)
 endif
 
-ifneq ($(KERNEL_VER), 3.4)
-ifneq ($(KERNEL_VER), 3.3)
-ifneq ($(KERNEL_VER), 3.2)
-ifneq ($(KERNEL_VER), 2.4)
-$(error Only kernel 2.4/3.2 is supported but you use $(KERNEL_VER))
-endif
-endif
-endif
-endif
-
 ifneq ($(KERNEL_VER), 2.4)
 
 TARGET := $(TARGETNAME).ko
